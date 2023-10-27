@@ -4,28 +4,24 @@ require_once 'connection.php';
 
 global $conn;
 
-// Construct the SQL query to retrieve all posts
-$sql = "SELECT * FROM posts";
+//$query = "SELECT * FROM posts ORDER BY Id DESC";
+$query = "
+    SELECT 
+        posts.*,
+        users.username AS author
+    FROM 
+        posts
+    JOIN 
+        users ON posts.user_id = users.id
+    ORDER BY 
+        posts.Id DESC
+";
+$result = mysqli_query($conn, $query);
+$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// Execute the query and store the result set
-$result = $conn->query($sql);
-
-// Create an array to store the posts
-$posts = array();
-
-// Loop through the result set and add each post to the array
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $post = array(
-            "id" => $row["id"],
-            "title" => $row["title"],
-            "content" => $row["content"],
-            // ...
-        );
-        array_push($posts, $post);
-    }
-}
-
-// Convert the array to a JSON string and echo it
+header('Content-Type: application/json');
 echo json_encode($posts);
+?>
+
+
 

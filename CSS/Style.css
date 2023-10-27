@@ -1,0 +1,93 @@
+body{
+  background-color: rgb(66, 46, 248);
+  margin: 0;
+  padding: 0;
+}
+
+#form{
+  background-color: rgb(255, 255, 255)blue;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 40%;
+}
+
+
+.friendButton{
+  width: 100px;
+  height: 50px;
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+.users{
+  margin-left: 5%;
+  background-color: rgb(164, 171, 207);
+  width: 150px;
+  height: 70px;
+}
+
+.topnav{
+  color: rgb(240, 220, 220);
+  background-color: rgb(96, 96, 221);
+  height: 70px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.topnav h1{
+ margin-left: 10px;
+ font-size: 50px;
+}
+
+
+input{
+  height: 20px;
+}
+
+.Post{
+  background-color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+.Post h2 {
+  margin-left: 5px;
+}
+.Post p{
+  margin-left: 5px;
+}
+
+
+
+button{
+  margin: 2px;
+}
+
+#box{
+    width: 300px;
+    height: 100px;
+}
+
+#container{
+    margin-top: 50px;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container button{ 
+    width: 100px;
+}
+
+
+
+
+
